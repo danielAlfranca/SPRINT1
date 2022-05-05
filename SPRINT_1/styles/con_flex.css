@@ -1,0 +1,159 @@
+  /* GENERAL */
+  
+   :root {
+      font-size: 16px;
+      --standardPad: 1.2rem;
+      --violet: #4e4e6a;
+      --red: #ea5455;
+      --orange: #ef7a3e;
+      --yellow: #fed460;
+      --blue: #1f6cb0;
+      --cyan: #70a3c4;
+      --white: #feea85;
+      --apricot: #e6af2e;
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  main {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  section {
+      border: solid var(--standardPad) black;
+  }
+  
+  div {
+      padding: var(--standardPad);
+  }
+  
+  p {
+      padding-top: var(--standardPad);
+  }
+  /* - SECTION 1   */
+  /* - DIV 1 */
+  
+  section:nth-child(1) div:first-child {
+      background-color: var(--blue);
+      justify-content: space-between;
+      border-bottom: solid var(--standardPad) black;
+  }
+  
+  section:nth-child(1) div:first-child>p {
+      background-color: var(--red);
+      margin-bottom: var(--standardPad);
+  }
+  
+  section:nth-child(1) div:first-child>p:last-child {
+      margin-bottom: 0
+  }
+  /* - SECTION 1 */
+  /* - DIV 2 */
+  
+  section:nth-child(1) div:nth-child(2) {
+      background-color: var(--orange);
+  }
+  
+  section:nth-child(1) div:nth-child(2)>p {
+      background-color: var(--yellow);
+  }
+  /* - SECTION 2 */
+  /* - DIV 1 */
+  
+  section:nth-child(2) {
+      margin: var(--standardPad) 0;
+      border: solid var(--standardPad) yellow
+  }
+  
+  section:nth-child(2) div:first-child {
+      background-color: var(--violet);
+      border-bottom: solid var(--standardPad) yellow;
+  }
+  
+  section:nth-child(2) div:first-child>p {
+      background-color: var(--blue);
+      margin-bottom: var(--standardPad);
+  }
+  
+  section:nth-child(2) div:first-child>p:last-child {
+      background-color: var(--cyan);
+      margin-bottom: 0;
+  }
+  /* - SECTION 2 */
+  /* - DIV 2 */
+  
+  section:nth-child(2) div:nth-child(2) {
+      background-color: var(--red);
+      flex-basis: 25%;
+  }
+  
+  section:nth-child(2) div:nth-child(2)>p {
+      margin-bottom: calc(var(--standardPad)/2);
+      background-color: var(--white);
+  }
+  
+  section:nth-child(2) div:nth-child(2)>p:last-child {
+      margin-bottom: 0;
+  }
+  /* - SECTION 3 */
+  
+  section:nth-child(3) {
+      padding-top: var(--standardPad);
+      background-color: var(--apricot);
+  }
+  
+  @media only screen and (min-width: 600px) {
+      /* SECTION 1 */
+      /* - DIV 1 */
+      section:nth-child(1) div:first-child {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: solid calc(var(--standardPad)/2) black;
+      }
+      section:nth-child(1) div:first-child>p {
+          flex-basis: 15%;
+          margin-bottom: 0;
+      }
+      section:nth-child(1) div:first-child>p:nth-child(2) {
+          flex-basis: 70%;
+          margin: 0 var(--standardPad);
+      }
+      section:nth-child(1) div:first-child>p {
+          background-color: var(--red);
+          flex-basis: 15%;
+      }
+      /* SECTION 2 */
+      /* - DIV 2 */
+      section:nth-child(2) div:first-child {
+          display: flex;
+          background-color: var(--violet);
+          flex-wrap: wrap;
+          flex-basis: 75%;
+      }
+      section:nth-child(2) div:first-child>p {
+          flex-basis: calc(49.98% - var(--standardPad)/2);
+          /* PARA MAS SEGURIDAD CON EL REDONDEO UN POCO MENOS DE 50% */
+      }
+      section:nth-child(2) div:first-child>p:nth-child(odd):not(:last-child) {
+          margin-right: var(--standardPad);
+      }
+      section:nth-child(2) div:first-child>p:last-child {
+          flex-basis: 100%;
+      }
+  }
+  
+  @media screen and (min-width:992px) {
+      /* SECTION 1 */
+      section:nth-child(2) {
+          display: flex;
+          border: solid var(--standardPad) black
+      }
+      section:nth-child(2) div:first-child {
+          border-bottom: 0;
+          border-right: solid var(--standardPad) black;
+      }
+  }
