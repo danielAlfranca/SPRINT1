@@ -6,7 +6,7 @@
       font-family: 'Alegreya', serif;
       --standardPad: 0.5rem;
       --headerHeight: 6rem;
-      --bannerHeight: 60vh;
+      --bannerHeight: 80vh;
       font-weight: 500;
   }
   
@@ -329,7 +329,7 @@
       }
       /*  banner */
       .banner {
-          background-size: 150%;
+          background-size: 200%;
       }
       /* articles */
       .articles-grid {
